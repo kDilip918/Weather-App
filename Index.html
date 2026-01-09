@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- html body structurs are here -->
+    <div class="container">
+      <!-- first section top-left MENU -->
+      <div class="menu">
+        <div class="menu-items">
+          <img src="icons/weather.png" alt="weather" />
+          <h3>weather</h3>
+        </div>
+        <div class="menu-items">
+          <img src="icons/citi-menu.png" alt="cities" />
+          <h3>cities</h3>
+        </div>
+        <div class="menu-items">
+          <img src="icons/map.png" alt="map" />
+          <h3 id="showMap">Map</h3>
+        </div>
+        <div class="menu-items">
+          <img src="icons/toggle.png" alt="settings" />
+          <h3>Dark</h3>
+        </div>
+      </div>
+      <!-- in Mid- the main section  -->
+      <div class="main">
+        <!-- first top section of mid and main:SEARCH CITY -->
+        <div class="search">
+          <input type="text" id="city" />
+          <button onclick="findCity()" type="submit" id="findCityBtn">search</button>
+        </div>
+        <!-- second top section of main div -->
+        <div class="display">
+          <div class="display-left">
+            <h2 id="city-display">Madrid</h2>
+            <h2 id="temp">31.c</h2>
+          </div>
+          <div class="display-right dis-img">
+            <!-- <img src="" alt="" id="dis-img" /> -->
+          </div>
+        </div>
+        <!-- third top section of main div -->
+        <!-- <div class="forcast-day">
+          <h4 id="for-h4">TODAY'S FORCAST</h4>
+          <br />
+          <div class="daily-forcast">
+            <h4>06:00</h4>
+            <img src="icons/sunny.png" alt="img" />
+            <h2 id="temp-daily">31.c</h2>
+          </div>
+          <div class="daily-forcast">
+            <h4>06:00</h4>
+            <img src="icons/rainyCloud.png" alt="img" />
+            <h2 id="temp-daily">31.c</h2>
+          </div>
+          <div class="daily-forcast">
+            <h4>06:00</h4>
+            <img src="icons/rainyCloud.png" alt="img" />
+            <h2 id="temp-daily">31.c</h2>
+          </div>
+          <div class="daily-forcast">
+            <h4>06:00</h4>
+            <img src="icons/cloudy.png" alt="img" />
+            <h2 id="temp-daily">31.c</h2>
+          </div>
+          <div class="daily-forcast">
+            <h4>06:00</h4>
+            <img src="icons/cloudy.png" alt="img" />
+            <h2 id="temp-daily">31.c</h2>
+          </div>
+          <div class="daily-forcast">
+            <h4>06:00</h4>
+            <img src="icons/sunny.png" alt="img" />
+            <h2 id="temp-daily">31.c</h2>
+          </div>
+          <div class="daily-forcast">
+            <h4>06:00</h4>
+            <img src="icons/rainyCloud.png" alt="img" />
+            <h2 id="temp-daily">31.c</h2>
+          </div>
+        </div> -->
+        <!-- bottom section of main div -->
+        <div class="air-condition">
+          <div class="air-condition-top">
+            <h4>AIR CONDITIONS</h4>
+          </div>
+          <!-- air condition bottom 4 things -->
+          <div class="air-condition-bottom">
+            <div class="feel">
+              <img class="bottom-img" src="icons/thermo.png" alt="" />
+              <h3 class="bottom-h3">Humidity</h3>
+              <h2 class="bottom-h2" id="humidity">30%</h2>
+            </div>
+            <div class="wind">
+              <img class="bottom-img" src="icons/wind.png" alt="" />
+              <h3 class="bottom-h3">Wind</h3>
+              <h2 class="bottom-h2" id="wind">2 Km/h</h2>
+            </div>
+            <div class="rainChance">
+              <img src="icons/umb.jpg" alt="" class="bottom-img" />
+              <h3 class="bottom-h3">Feels Like</h3>
+              <h2 class="bottom-h2" id="feelsLike"></h2>
+            </div>
+            <div class="uvIndex">
+              <img class="bottom-img" src="icons/uvIndex.png" alt="" />
+              <h3 class="bottom-h3">UV index</h3>
+              <h2 class="bottom-h2" id="uvIndex">3</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- here is the forcast section -->
+      <div class="forcast">
+        <h3>7-DAY FORCAST</h3>
+        <div class="forcast-week">
+          <h4>Mon</h4>
+          <img src="icons/sunny.png" alt="today" />
+          <h4>Sunny</h4>
+          <h4>36/22</h4>
+        </div>
+        <hr />
+        <div class="forcast-week">
+          <h4>Tue</h4>
+          <img src="icons/rainyCloud.png" alt="today" />
+          <h4>Sunny</h4>
+          <h4>36/22</h4>
+        </div>
+        <hr />
+        <div class="forcast-week">
+          <h4>Wed</h4>
+          <img src="icons/cloudy.png" alt="today" />
+          <h4>Sunny</h4>
+          <h4>36/22</h4>
+        </div>
+        <hr />
+        <div class="forcast-week">
+          <h4>Thu</h4>
+          <img src="icons/rainy.png" alt="today" />
+          <h4>Sunny</h4>
+          <h4>36/22</h4>
+        </div>
+        <hr />
+        <div class="forcast-week">
+          <h4>Fri</h4>
+          <img src="icons/sunny.png" alt="today" />
+          <h4>Sunny</h4>
+          <h4>36/22</h4>
+        </div>
+        <hr />
+        <div class="forcast-week">
+          <h4>Sat</h4>
+          <img src="icons/sunny.png" alt="today" />
+          <h4>Sunny</h4>
+          <h4>36/22</h4>
+        </div>
+        <hr />
+        <div class="forcast-week">
+          <h4>Sun</h4>
+          <img src="icons/rainy.png" alt="today" />
+          <h4>Sunny</h4>
+          <h4>36/22</h4>
+        </div>
+      </div>
+    </div>
+    <!-- javascripts link are below -->
+    <script src="Script.js"></script>
+  </body>
+</html>
