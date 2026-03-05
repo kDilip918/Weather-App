@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://sdk.mappls.com/map/sdk/plugins?access_token=<Static Key>&v=3.0&libraries=search"></script>
+  </head>
+  <body>
+    <!-- html body structurs are here -->
+    <div class="container">
+      <!-- first section top-left MENU -->
+      <div class="menu">
+        <div class="menu-items">
+          <img src="icons/weather.png" alt="weather" onclick="showWeather()" />
+          <h3 onclick="showWeather()">weather</h3>
+        </div>
+
+        <div class="menu-items">
+          <img src="icons/map.png" alt="map" onclick="showMap()" />
+          <h3 id="showMap" onclick="showMap()">Map</h3>
+        </div>
+        <div class="menu-items" onclick="changeMode()">
+          <img src="icons/mode.png" alt="settings" />
+          <h3 id="modeChange">Dark</h3>
+        </div>
+      </div>
+      <!-- in Mid- the main section  -->
+      <div class="main">
+        <!-- first top section of mid and main:SEARCH CITY -->
+        <div class="search">
+          <input type="text" id="city" />
+          <button onclick="findCity()" type="submit" id="findCityBtn">
+            search
+          </button>
+        </div>
+        <!-- second top section of main div -->
+        <div class="display">
+          <div class="display-left">
+            <h2 id="city-display">Madrid</h2>
+            <h2 id="temp">31.c</h2>
+          </div>
+          <div class="display-right dis-img">
+            <!-- <img src="" alt="" id="dis-img" /> -->
+          </div>
+        </div>
+        <!-- bottom section of main div -->
+        <div class="air-condition">
+          <div class="air-condition-top">
+            <h4>AIR CONDITIONS</h4>
+          </div>
+          <!-- air condition bottom 4 things -->
+          <div class="air-condition-bottom">
+            <div class="feel">
+              <img class="bottom-img" src="icons/humid.png" alt="" />
+              <h3 class="bottom-h3">Humidity</h3>
+              <h2 class="bottom-h2" id="humidity">30%</h2>
+            </div>
+            <div class="wind">
+              <img class="bottom-img" src="icons/wind.png" alt="" />
+              <h3 class="bottom-h3">Wind</h3>
+              <h2 class="bottom-h2" id="wind">2 Km/h</h2>
+            </div>
+            <div class="rainChance">
+              <img src="icons/feelsLike.png" alt="" class="bottom-img" />
+              <h3 class="bottom-h3">Feels Like</h3>
+              <h2 class="bottom-h2" id="feelsLike"></h2>
+            </div>
+            <div class="uvIndex">
+              <img class="bottom-img" src="icons/uvIndex.png" alt="" />
+              <h3 class="bottom-h3">UV index</h3>
+              <h2 class="bottom-h2" id="uvIndex">3</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main- for second tab cities.. -->
+      <div class="main-cities"></div>
+      <!-- main for third tab maps -->
+      <div class="showMap"></div>
+      <!-- here is the forcast section -->
+      <div class="forcast1">
+        <h3>Recent Cities</h3>
+        <hr />
+        <div class="forcast"></div>
+      </div>
+    </div>
+    <!-- javascripts link are below -->
+    <script src="Script.js"></script>
+  </body>
+</html>
